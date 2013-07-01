@@ -141,9 +141,7 @@ public class WikiPage {
      * @return a list of links contained in the page
      */
     public List<String> getLinks() {
-        //return empty list.
-        return new List<String>();
-        //return wikiTextParser.getLinks();
+        return wikiTextParser.getLinks();
     }
 
     public void setID(String id) {
