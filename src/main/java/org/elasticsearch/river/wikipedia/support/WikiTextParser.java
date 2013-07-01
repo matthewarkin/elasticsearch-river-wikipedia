@@ -81,8 +81,8 @@ public class WikiTextParser {
 
     public ArrayList<String> getLinks() {
         return null;
-        if (pageLinks == null) parseLinks();
-        return pageLinks;
+       // if (pageLinks == null) parseLinks();
+       // return pageLinks;
     }
 
     private void parseCategories() {
