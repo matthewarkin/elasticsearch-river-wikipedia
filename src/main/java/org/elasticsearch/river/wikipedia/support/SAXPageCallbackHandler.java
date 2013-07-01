@@ -17,7 +17,7 @@ public class SAXPageCallbackHandler extends DefaultHandler {
     private String currentWikitext;
     private String currentTitle;
     private String currentID;
-    private Date currentDate;
+    private String currentDate;
 
     public SAXPageCallbackHandler(PageCallbackHandler ph) {
         pageHandler = ph;
@@ -30,7 +30,7 @@ public class SAXPageCallbackHandler extends DefaultHandler {
             currentWikitext = "";
             currentTitle = "";
             currentID = "";
-            currentDate=""
+            currentDate="";
         }
     }
 
