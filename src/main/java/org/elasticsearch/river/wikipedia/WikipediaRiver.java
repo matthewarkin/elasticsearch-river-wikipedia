@@ -179,6 +179,7 @@ public class WikipediaRiver extends AbstractRiverComponent implements River {
                 builder.field("special", page.isSpecialPage());
                 builder.field("stub", page.isStub());
                 builder.field("disambiguation", page.isDisambiguationPage());
+                builder.field("date", page.getDate());
 
                 builder.startArray("category");
                 for (String s : page.getCategories()) {
