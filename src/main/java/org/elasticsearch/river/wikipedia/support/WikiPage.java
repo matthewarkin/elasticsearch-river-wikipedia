@@ -31,7 +31,7 @@ public class WikiPage {
     private String title = null;
     private WikiTextParser wikiTextParser = null;
     private String id = null;
-    private String date = null;
+    private String date = "";
 
     /**
      * Set the page title. This is not intended for direct use.
