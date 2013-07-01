@@ -39,6 +39,7 @@ public class SAXPageCallbackHandler extends DefaultHandler {
             currentPage.setTitle(currentTitle);
             currentPage.setID(currentID);
             currentPage.setWikiText(currentWikitext);
+            currentPage.setDate(currentDate);
             pageHandler.process(currentPage);
         }
         if (qName.equals("mediawiki")) {
