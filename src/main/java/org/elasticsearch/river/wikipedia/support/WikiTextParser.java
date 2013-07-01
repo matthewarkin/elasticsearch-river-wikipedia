@@ -115,10 +115,10 @@ public class WikiTextParser {
         text = text.replaceAll("<ref>.*?</ref>", " ");
         text = text.replaceAll("</?.*?>", " ");
         text = text.replaceAll("\\{\\{.*?\\}\\}", " ");
-        text = text.replaceAll("\\[\\[.*?:.*?\\]\\]", " ");
-        text = text.replaceAll("\\[\\[(.*?)\\]\\]", "$1");
+        //text = text.replaceAll("\\[\\[.*?:.*?\\]\\]", " ");
+        //text = text.replaceAll("\\[\\[(.*?)\\]\\]", "$1");
         text = text.replaceAll("\\s(.*?)\\|(\\w+\\s)", " $2");
-        text = text.replaceAll("\\[.*?\\]", " ");
+        //text = text.replaceAll("\\[.*?\\]", " ");
         text = text.replaceAll("\\'+", "");
         return text;
     }
