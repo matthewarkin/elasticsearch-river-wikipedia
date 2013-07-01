@@ -145,6 +145,10 @@ public class WikiPage {
     public InfoBox getInfoBox() {
         return wikiTextParser.getInfoBox();
     }
+    
+    public Date getDate(){
+        return wikiTextParser.getDate();
+    }
 
     public String getID() {
         return id;
