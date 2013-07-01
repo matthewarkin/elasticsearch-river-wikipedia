@@ -56,7 +56,7 @@ public class WikiPage {
         this.date=date;
     }
     
-    public String GetDate(){
+    public String getDate(){
         return date;
     }
     /**
