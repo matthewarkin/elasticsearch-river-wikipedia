@@ -17,7 +17,7 @@ public class SAXPageCallbackHandler extends DefaultHandler {
     private String currentWikitext;
     private String currentTitle;
     private String currentID;
-    private String currentDate;
+   //private String currentDate;
 
     public SAXPageCallbackHandler(PageCallbackHandler ph) {
         pageHandler = ph;
@@ -30,7 +30,7 @@ public class SAXPageCallbackHandler extends DefaultHandler {
             currentWikitext = "";
             currentTitle = "";
             currentID = "";
-            currentDate="";
+            //currentDate="";
         }
     }
 
@@ -58,8 +58,8 @@ public class SAXPageCallbackHandler extends DefaultHandler {
             currentID = new String(ch, start, length);
         } else if (currentTag.equals("text")) {
             currentWikitext = currentWikitext.concat(new String(ch, start, length));
-        } else if (currentTag.equals("timestamp") && (currentDate.length() == 0)) {
-            currentDate = new String(ch, start, length);
-        }
+        } //else if (currentTag.equals("timestamp") && (currentDate.length() == 0)) {
+          //  currentDate = new String(ch, start, length);
+          //  }
     }
 }
