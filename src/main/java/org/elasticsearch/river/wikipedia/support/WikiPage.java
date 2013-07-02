@@ -31,7 +31,7 @@ public class WikiPage {
     private String title = null;
     private WikiTextParser wikiTextParser = null;
     private String id = null;
-    private String date = "";
+    private String date = null;
 
     /**
      * Set the page title. This is not intended for direct use.
@@ -52,8 +52,8 @@ public class WikiPage {
         wikiTextParser = new WikiTextParser(wtext);
     }
     
-    public void setDate(String date){
-        this.date=date;
+    public void setDate(String Date){
+        this.date = Date;
     }
     
     public String getDate(){
