@@ -80,7 +80,6 @@ public class WikiTextParser {
     }
 
     public ArrayList<String> getLinks() {
-      
        if (pageLinks == null) parseLinks();
        return pageLinks;
     }
@@ -97,18 +96,16 @@ public class WikiTextParser {
 
     private void parseLinks() {
         pageLinks = new ArrayList<String>();
-        
-//
-//        Pattern catPattern = Pattern.compile("\\[\\[(.*?)\\]\\]", Pattern.MULTILINE);
-//        Matcher matcher = catPattern.matcher(wikiText);
-//        while (matcher.find()) {
-//            String[] temp = matcher.group(1).split("\\|");
-//            if (temp == null || temp.length == 0) continue;
-//            String link = temp[0];
-//            if (link.contains(":") == false) {
-//                pageLinks.add(link);
-//            }
-//        }
+        Pattern catPattern = Pattern.compile("\\[\\[(.*?)\\]\\]", Pattern.MULTILINE);
+        Matcher matcher = catPattern.matcher(wikiText);
+        while (matcher.find()) {
+            String[] temp = matcher.group(1).split("\\|");
+            if (temp == null || temp.length == 0) continue;
+            String link = temp[0];
+            if (link.contains(":") == false) {
+                pageLinks.add(link);
+            }
+        }
     }
 
     public String getPlainText() {
