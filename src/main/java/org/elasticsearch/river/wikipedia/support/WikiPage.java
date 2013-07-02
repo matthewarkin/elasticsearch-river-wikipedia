@@ -52,8 +52,8 @@ public class WikiPage {
         wikiTextParser = new WikiTextParser(wtext);
     }
     
-    public void setDate(String Date){
-        this.date = Date;
+    public void setDate(String date){
+        this.date=date;
     }
     
     public String getDate(){
