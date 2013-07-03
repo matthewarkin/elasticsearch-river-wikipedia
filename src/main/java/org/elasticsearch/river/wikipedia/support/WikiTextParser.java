@@ -109,17 +109,7 @@ public class WikiTextParser {
     }
 
     public String getPlainText() {
-        String text = wikiText.replaceAll("&gt;", ">");
-        text = text.replaceAll("&lt;", "<");
-        text = text.replaceAll("<ref>.*?</ref>", " ");
-        text = text.replaceAll("</?.*?>", " ");
-        text = text.replaceAll("\\{\\{.*?\\}\\}", " ");
-        //text = text.replaceAll("\\[\\[.*?:.*?\\]\\]", " ");
-        //text = text.replaceAll("\\[\\[(.*?)\\]\\]", "$1");
-        text = text.replaceAll("\\s(.*?)\\|(\\w+\\s)", " $2");
-        //text = text.replaceAll("\\[.*?\\]", " ");
-        text = text.replaceAll("\\'+", "");
-        return text;
+        return wikiText;
     }
 
     public InfoBox getInfoBox() {
