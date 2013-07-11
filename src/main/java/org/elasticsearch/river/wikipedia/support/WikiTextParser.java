@@ -46,7 +46,7 @@ public class WikiTextParser {
 
     public WikiTextParser(String wtext) {
         wikiText = wtext;
-        Matcher matcher = redirectPattern.matcher(wikiText);
+       /* Matcher matcher = redirectPattern.matcher(wikiText);
         if (matcher.find()) {
             redirect = true;
             if (matcher.groupCount() == 1)
@@ -56,6 +56,7 @@ public class WikiTextParser {
         stub = matcher.find();
         matcher = disambCatPattern.matcher(wikiText);
         disambiguation = matcher.find();
+        */
     }
 
     public boolean isRedirect() {
@@ -75,12 +76,12 @@ public class WikiTextParser {
     }
 
     public ArrayList<String> getCategories() {
-        if (pageCats == null) parseCategories();
+       // if (pageCats == null) parseCategories();
         return pageCats;
     }
 
     public ArrayList<String> getLinks() {
-       if (pageLinks == null) parseLinks();
+      // if (pageLinks == null) parseLinks();
        return pageLinks;
     }
 
@@ -114,8 +115,8 @@ public class WikiTextParser {
 
     public InfoBox getInfoBox() {
         //parseInfoBox is expensive. Doing it only once like other parse* methods
-        if (infoBox == null)
-            infoBox = parseInfoBox();
+       // if (infoBox == null)
+       //     infoBox = parseInfoBox();
         return infoBox;
     }
 
